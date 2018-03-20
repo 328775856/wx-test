@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/new/new",
+    "pages/index/index",
+    "pages/test/Component/TextInput/TextInput",
+    "pages/test/Component/TextInput/goods",
+    "pages/logs/logs",
+    "pages/test/test"
+    
+     
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"red"
+  }
+}

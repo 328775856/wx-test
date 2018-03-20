@@ -1,0 +1,47 @@
+/* pages/test/test.wxss */
+.flex-item{
+  width: 200rpx;
+  height: 200rpx;
+}
+.flex-wrp{
+  display: flex;
+}
+.section_title{
+  text-align: center;
+}
+.bc_green{
+  background: green;
+}
+.bc_red{
+  background: red;
+}
+.bc_blue{
+  background: blue;
+}
+.green_hover{
+  border: 5px solid black;
+}
+#item-0{
+  width: 200rpx;
+  height: 200rpx;
+  border: solid #000 1rpx;
+  background: #fee;
+}
+.page-body-form-value{
+  height: 100%;
+  border: #000 1px solid;
+  color: #22f;
+}
+/* .input{
+  border: 0px solid #000;
+} */
+.Btn1{
+  border-radius: 5px 5px 0 0;
+}
+/* .Btn1:hover{
+  border: 1px solid #607;
+  background: red;
+} */
+.Btn2{
+  border-radius: 0px 0 5px 5px;
+}

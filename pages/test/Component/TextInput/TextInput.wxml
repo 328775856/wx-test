@@ -1,0 +1,62 @@
+<view><text class="iconfont icon-gouwuche1">{{gouwuche1}}</text></view>
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:180px; background:">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item >
+      <image src="{{item}}" class="slide-image"  style='border:0px solid red;display:block;margin:0 auto;height:180px;width:100%'/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="search__top searchbd">
+ <view class="search__icon search__active" style="width:40rpx;">
+      <icon type="search" size="18" color="#888" style="float:left;margin:10rpx 30rpx 0 10rpx;"></icon>
+    </view>
+  <form class="search__form" bindsubmit="searchSubmit">
+    <input value="{{search.searchValue}}" placeholder="商品名称" class="search__input " />
+   
+  </form>
+</view>
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+ <button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration  -->
+ 
+<view class='section'>
+  <block wx:for="{{images2}}">
+    <view class='item' >
+    <image src='{{item}}' bindtap='tapTo'></image>
+    <text>商品1</text>
+    </view>
+  </block> 
+  <block wx:for="{{images1}}">
+    <view class='item' >
+    <image src='{{item}}'></image>
+    <text>商品1</text>
+    </view>
+  </block>     
+  <block wx:for="{{images3}}">
+    <view class='item' >
+    <image src='{{item}}'></image>
+    <text>商品1</text>
+    </view>
+  </block>     
+  <block wx:for="{{images4}}">
+    <view class='item' >
+    <image src='{{item}}'></image>
+    <text>商品1</text>
+    </view>
+  </block>
+  <view class='footer'>
+    <view class='item1'>实物拍摄
+      <icon type="success" size="22" color="#ddd" style="float:left;margin:12px 0 0 10px;"></icon>
+    </view>
+    <view class='item1'>品质保障
+      <icon type="success" size="22" color="#ddd" style="float:left;margin:12px 0 0 10px;"></icon>
+    </view>
+    <view class='item1'>闪电发货
+      <icon type="success" size="22" color="#ddd" style="float:left;margin:12px 0 0 10px;"></icon>
+    </view>
+  </view>          
+</view>
+

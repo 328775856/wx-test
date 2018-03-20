@@ -1,0 +1,66 @@
+<!-- <view class="section">
+  <view class="section__title">flex-direction: row</view>
+  <view class="flex-wrp" style="flex:block;flex-direction:row;">
+    <view class="flex-item bc_green" hover-class="none">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title">flex-direction: column</view>
+  <view class="flex-wrp" style="height: 300px;flex-direction:column;">
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+  <view wx:for="{{array}}">{{item}}</view>
+  <view wx:if="{{view=='WEBVIEN'}}">WEBVIEN</view>
+  <view wx:elif="{{view=='APP'}}">APP</view>
+  <view wx:else="{{view=='MINA'}}">MINA</view>
+</view>
+
+<view id='item-{{id}}'></view>
+<view wx:if="{{condition}}">condition </view>
+<checkbox checked="{{false}}"> </checkbox>
+<view hidden="{{flag ? true : false}}"> Hidden </view>
+<view> {{a + b}} + {{c}} + d </view>
+<view wx:if="{{length>10}}">123</view>
+<view>{{"hello"+name}}</view>
+<view>{{object.key}} {{array[0]}}</view>
+<view bindtap="add"> {{count}} </view>
+<view wx:for="{{array}}" wx:for-item="i">
+  <view wx:for="{{array2}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j }}
+    </view>
+  </view>
+</view>
+<block wx:for="{{array}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block> -->
+<!-- <switch wx:for="{{objectArray}}" wx:key="unique" style="display: inline;"> {{item.unique}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: inline;"> {{item}} </switch>
+<button bindtap="switch1"> Switch </button>
+<button bindtap="addNumberToFront"> Add to the front </button> -->
+<view class='itemView'>
+   用户名：<input class='input' hover="true" hover-class="green_hover" name="username" placeholder='请输入用户名' bindinput="userNameInput"></input>
+</view>
+<view class='itemView'>
+  密码：<input class='input' name="password" placeholder='请输入密码' bindinput='pasaWdInput'></input>
+</view>
+<view class="viewName" style="background-color:#fbf9fe">
+  <button class='loginBtn Btn1' type='primary' bindtap="loginBtnClick">登陆</button>
+  <button class='resetBtn Btn2' type='primary' bindtap='resetBtnClick'>清除</button>
+</view>
+<view>{{infoMess}}</view>
+<view>{{userName}}</view>
+<view>{{passWd}}</view>
+<view class='viewName' style='margin-top:60px;'>
+  <navigator url="Component/TextInput/TextInput">
+    <text class='view-Name'>各类型输入框展示</text>
+  </navigator>
+</view>

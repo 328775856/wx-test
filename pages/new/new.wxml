@@ -1,0 +1,21 @@
+<view class='container'>
+  <view class='userinfo'>
+    <button wx:if="{{!hasUserInfo && canIUse}}">获取头像昵称</button>
+    <block wx:else>
+      <image src='{{userInfo.avatarUrl}}' background-size="cover" style='width:100px;height:100px;' wx:bind="bindViewTap"></image>
+      <text class="userinfo-nickname">{{userinfo.nickname}}</text>
+    </block>
+  </view>
+  <view class='usermotto'>
+    <text class='user-motto'>{{motto}}</text>
+  </view>
+  <view bindtap="bindViewTap">{{msg}}</view>
+  <button bindtap="clickMe">点击我</button>
+  <map longitude="广州经度" latitude="广州纬度"></map>
+  <view id="item-{{id}}">{{message}}</view>
+  <view wx:if="{{condition}}">{{message}}
+  <checkbox checked="{{false}}">13</checkbox></view>
+  <view hidden="{{flag?true:false}}">hidden</view>
+  <view>{{a+b}}+{{c}}</view>
+  <view wx:if="{{length>5}}">1231</view>
+</view>
