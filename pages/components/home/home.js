@@ -7,12 +7,14 @@ Page({
   data: {
     nav: ['护肤', '彩妆', '香水', '个人护理'],
     bannerImgUrl: ['../../images/hf1.jpg', '../../images/hf1.jpg', '../../images/hf1.jpg','../../images/hf1.jpg'],
+    bannerTitle: [{ 'title': '品牌馆', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }],
     currentTab: 0,
     status: 0,
     indicator:true,
     autoplay:true,
     interval:3000,
     duration:1000,
+    s:0,
     imgUrl: {
       'hf': [{ 'msg': '../../images/hf1.jpg','text':'98.00' },
         { "msg": '../../images/hf2.jpg', 'text': '￥198.00' },
@@ -41,7 +43,13 @@ Page({
       currentTab: e.currentTarget.dataset.idx,
       status: e.currentTarget.dataset.idx
     })
-    console.log(this.data.status)
+    console.log()
+  },
+  show:function(e){
+    this.setData({
+      s: e.currentTarget.dataset.num
+    })
+    console.log(this.data.s)
   },
 
   /**
