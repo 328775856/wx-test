@@ -1,0 +1,9 @@
+<!--pages/components/classify/classify.wxml-->
+<view class='container'>
+  <view class='left'>
+    <view class='view'wx:for="{{list}}" wx:key="unque">
+        {{item}}
+    </view>
+  </view>
+  <view class='right'>12312</view>
+</view>

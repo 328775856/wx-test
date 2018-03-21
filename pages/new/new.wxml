@@ -14,8 +14,35 @@
   <map longitude="广州经度" latitude="广州纬度"></map>
   <view id="item-{{id}}">{{message}}</view>
   <view wx:if="{{condition}}">{{message}}
-  <checkbox checked="{{false}}">13</checkbox></view>
+    <checkbox checked="{{false}}">13</checkbox>
+  </view>
   <view hidden="{{flag?true:false}}">hidden</view>
   <view>{{a+b}}+{{c}}</view>
   <view wx:if="{{length>5}}">1231</view>
+  <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+    {{idx}}:{{itemName.message}}
+  </view>
+
+  <!-- <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+    <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+      <view wx:if="{{i<=j}}">
+        {{i}}*{{j}}={{i*j}}
+      </view>
+    </view>
+  </view> -->
+
+  <!-- <block wx:for="{{[1,2,3,4]}}">
+    <view style='display:inline'>index:{{index}}</view>
+    <view style='display:inline'>item:{{item}}</view>
+  </block> -->
+  <view id='tapTest' data-hi="weChat" bindtouchStart='tapName'>click me!</view>
+  <view id="outer" bindtap="handleTap1">
+  outer view
+  <view id="middle" catchtap="handleTap2">
+    middle view
+    <view id="inner" bindtap="handleTap3">
+      inner view
+    </view>
+  </view>
+</view>
 </view>

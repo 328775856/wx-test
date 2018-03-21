@@ -1,0 +1,42 @@
+<!--pages/components/home/home.wxml-->
+<view class='container'>
+
+  <swiper style='width:100%;' indicator-dots="{{indicator}}" autoplay='{{autoplay}}' interval='{{interval}}'>
+    <block wx:for="{{bannerImgUrl}}" wx:key="list">
+      <swiper-item>
+        <image src='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='header'>
+    <text wx:for="{{nav}}" data-idx="{{index}}" wx:key="unique" bindtap="navtap" class="item {{currentTab==index?'active':''}}">{{item}}</text>
+  </view>
+  <view class='content'>
+    <view class="{{currentTab==0?'show':'hidden'}} wrap">
+      <view class='flex'   wx:for="{{imgUrl.hf}}" >
+        <image src='{{item.msg}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+    <view class="{{currentTab==1?'show':'hidden'}} wrap">
+            <view class='flex'  style='flex-flow:row wrap;' wx:for="{{imgUrl.cz}}" >
+        <image src='{{item.msg}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+    <view class="{{currentTab==2?'show':'hidden'}} wrap">
+            <view class='flex'  style='flex-flow:row wrap;' wx:for="{{imgUrl.xs}}" >
+        <image src='{{item.msg}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+    <view class="{{currentTab==3?'show':'hidden'}} wrap">
+            <view class='flex'  style='flex-flow:row wrap;' wx:for="{{imgUrl.gh}}" >
+        <image src='{{item.msg}}'></image>
+        <text>{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>-已经到底了哦-</view>
+</view>

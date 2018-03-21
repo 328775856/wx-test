@@ -1,0 +1,25 @@
+/* pages/components/classify/classify.wxss */
+.container{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+.left{
+  flex:0 0 25%;
+}
+.view{
+  padding: 30%;
+  border-bottom: 1px #ccc solid;
+  background: #eee ;
+  font-size: 30rpx;
+}
+.view{
+  padding: 30%;
+  border-bottom: 1px #ccc solid;
+  background: #eee ;
+  font-size: 30rpx;
+}
+.right{
+  flex:0 0 75%;
+}

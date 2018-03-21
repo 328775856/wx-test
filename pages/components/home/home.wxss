@@ -1,0 +1,66 @@
+/* pages/components/home/home.wxss */
+.border{
+  border: 1px #000 solid;
+}
+.flex{
+  flex:0 0 50%;
+}
+.wrap{
+  display:flex;flex-flow:row wrap;
+}
+.show{
+  display: flex;
+}
+.hidden{
+  display: none;
+}
+.container{
+  padding: 0;
+  margin: 0;
+}
+.container text{
+  font-size: 30rpx;
+  margin-right: 50rpx;
+}
+.header .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+  font-size:14px;
+}  
+/* 顶部导航字体颜色 */
+.header .item.active{  
+  color: #f0145a;  
+}  
+/* 顶部指示条属性 */
+.header .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  top: 50rpx;
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 6rpx;  
+  background: #f0145a;  
+}
+
+/* content */
+.flex image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.flex{
+  text-align: center
+}
+.flex text{
+  margin-left:50rpx;
+  color: lightseagreen
+}
+/*bottom*/
+.bottom{
+  color: gray;
+  font-family: '微软雅黑';
+  font-size: 30rpx;
+}

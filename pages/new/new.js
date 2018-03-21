@@ -19,7 +19,9 @@ Page({
     a:1,
     b:2,
     c:3,
-    length:6
+    length:6,
+    array:[{message:'foo'},
+    {message:'bar'}]
   },
   view:function(){
     wx.navigateTo({
@@ -49,6 +51,18 @@ wx.showToast({
 this.setData({
   flag:1
 })
+},
+  tapName:function(event){
+    alert(event)
+  },
+  handleTap1:function(){
+    alert('1')
+  },
+  handleTap2: function () {
+    alert('2')
+  },
+  handleTap3: function () {
+    alert('3')
   },
 
   /**
@@ -90,6 +104,8 @@ this.setData({
 
   /**
    * 生命周期函数--监听页面初次渲染完成
+   * 
+   * 
    */
   onReady: function () {
     
