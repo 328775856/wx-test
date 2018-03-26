@@ -2,7 +2,6 @@
   "pages":[
     "pages/components/home/home",
     "pages/components/classify/classify",
-  
     "pages/components/cart/cart",
     "pages/components/mine/mine",
     "pages/components/index/index",

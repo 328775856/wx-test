@@ -13,14 +13,14 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class='wrap bg_white' style='width:100%;margin-bottom:10rpx;'> 
-   <view style='flex:1 0 20%;text-align:center'  wx:for="{{bannerTitle}}"  data-num="{{index}}"  bindtap="show" class="item {{s==index?'active':''}}">
-    <image src='{{item.iconPath}}' class='column' style='width:150rpx;height:150rpx'></image>
-    <text>{{item.title}}</text>
-   </view>
+  <view class='wrap bg_white' style='width:100%;margin-bottom:10rpx;'>
+    <view style='flex:1 0 20%;text-align:center' wx:for="{{bannerTitle}}" data-num="{{index}}" bindtap="show" class="item wrap {{s==index?'active':''}}">
+      <image src='{{item.iconPath}}' class='column' style='width:150rpx;height:150rpx'></image>
+      <text>{{item.title}}</text>
+    </view>
   </view>
-    <text style='width:100%;text-align:center;font-size:50rpx' class='newUp bg_white'>新品上架</text>
-
+  <text style='width:100%;text-align:center;font-size:50rpx; padding-top:20rpx;' class='newUp bg_white'>新品上架</text>
+  <image src='../../images/qb_banner.jpg' style='width:100%;margin-bottom:20rpx;'></image>
   <view class='content'>
     <view class="{{currentTab==0?'show':'hidden'}} wrap">
       <view class='flex' wx:for="{{imgUrl.hf}}">

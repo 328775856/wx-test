@@ -6,8 +6,8 @@ Page({
    */
   data: {
     nav: ['护肤', '彩妆', '香水', '个人护理'],
-    bannerImgUrl: ['../../images/hf1.jpg', '../../images/hf1.jpg', '../../images/hf1.jpg','../../images/hf1.jpg'],
-    bannerTitle: [{ 'title': '品牌馆', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }, { 'title': '类目', 'iconPath': '../../images/bg.jpg' }],
+    bannerImgUrl: ['../../images/banner1.jpg', '../../images/banner2.jpg', '../../images/banner3.jpg','../../images/banner4.jpg'],
+    bannerTitle: [{ 'title': '品牌馆', 'iconPath': '../../images/banner1.jpg' }, { 'title': '类目', 'iconPath': '../../images/banner2.jpg' }, { 'title': '特惠专场', 'iconPath': '../../images/bg.jpg' }, { 'title': '推荐好友', 'iconPath': '../../images/like2.jpg' }],
     currentTab: 0,
     status: 0,
     indicator:true,
