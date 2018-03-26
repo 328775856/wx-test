@@ -1,2 +1,20 @@
-<!--pages/components/cart/cart.wxml-->
-<text>pages/components/cart/cart.wxml</text>
+<view class="container">
+  <block wx:for="{{carts}}" wx:key="carts">
+    <view class='col'  data-index="{{index}}">
+      <checkbox></checkbox>
+      <image src="{{item.pic}}" style='width:200rpx;height:180rpx;'></image>
+      <view class='right'  style='text-align:center;font-size:40rpx;'>
+        <view style='font-size:30rpx;'>{{item.name}}</view>
+        <view style='color:red'>￥{{item.price}}</view>
+        <button type='text' bindtap='minus'>-</button>
+        <button type='text'>{{item.count.quantity}}</button>
+        <button type='text' bidntap="add">+</button>
+      </view>
+    </view>
+  </block>
+  <view class='bottom'>
+    <checkbox checked='{{isSelect}}' bindtap='isAllchecked'></checkbox>
+    <view>合计：{{total}}</view>
+    <button hover-class="button-hover">去结算</button>
+  </view>
+</view>
