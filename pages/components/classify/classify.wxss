@@ -1,4 +1,7 @@
 /* pages/components/classify/classify.wxss */
+.active{
+  color: rebeccapurple;
+}
 .container{
   padding: 0;
   margin: 0;
@@ -14,12 +17,27 @@
   background: #eee ;
   font-size: 30rpx;
 }
-.view{
-  padding: 30%;
-  border-bottom: 1px #ccc solid;
-  background: #eee ;
-  font-size: 30rpx;
-}
 .right{
-  flex:0 0 75%;
+  width: 75%;
+  height: 300rpx;
+  border: 0px #000 solid;
+  margin-top: -400rpx;
+  display: flex;
+  flex-flow: row wrap;
+}
+.child{
+  width:50%;
+  height: 100px;
+  margin: 30rpx 0;
+  font-size: 25rpx;
+}
+.child image{
+  width:200rpx;
+  height: 200rpx;
+  display: block;
+  margin: 0 auto;
+}
+.name{
+  margin-top: 10rpx;
+  text-align: center;
 }

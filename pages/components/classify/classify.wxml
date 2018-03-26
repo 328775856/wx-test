@@ -1,9 +1,14 @@
 <!--pages/components/classify/classify.wxml-->
 <view class='container'>
   <view class='left'>
-    <view class='view'wx:for="{{list}}" wx:key="unque">
-        {{item}}
+    <view class="view {{cur==index?'active':''}}"  wx:for="{{cateItems}}" wx:key="unique" data-index="{{index}}" bindtap="chooseTab">
+        {{item.cate_name}}
     </view>
   </view>
-  <view class='right'>12312</view>
+  <view class='right'>
+      <view  wx:for="{{cateItems[cur].children}}" class='child'>
+        <image src='{{item.image}}'></image>
+        <view class='name'>{{item.name}}</view>
+      </view>
+  </view>
 </view>

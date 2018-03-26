@@ -14,7 +14,7 @@
     </block>
   </swiper>
   <view class='wrap bg_white' style='width:100%;margin-bottom:10rpx;'>
-    <view style='flex:1 0 20%;text-align:center' wx:for="{{bannerTitle}}" data-num="{{index}}" bindtap="show" class="item wrap {{s==index?'active':''}}">
+    <view style='flex:1 0 20%;text-align:center' wx:for="{{bannerTitle}}" data-num="{{index}}" bindtap="localTo" class="item wrap {{s==index?'active':''}}">
       <image src='{{item.iconPath}}' class='column' style='width:150rpx;height:150rpx'></image>
       <text>{{item.title}}</text>
     </view>

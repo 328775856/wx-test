@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/components/home/home",
     "pages/components/classify/classify",
+    "pages/components/home/home",
     "pages/components/cart/cart",
     "pages/components/mine/mine",
     "pages/components/index/index",
@@ -11,7 +11,7 @@
     "pages/test/test"
     
      
-  ],
+  ],  
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
