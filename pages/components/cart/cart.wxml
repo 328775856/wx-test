@@ -1,14 +1,14 @@
 <view class="container">
-  <block wx:for="{{carts}}" wx:key="carts">
-    <view class='col'  data-index="{{index}}">
+  <block >
+    <view class='col' wx:for="{{carts}}" wx:key="carts"  data-index="{{index}}">
       <checkbox></checkbox>
       <image src="{{item.pic}}" style='width:200rpx;height:180rpx;'></image>
       <view class='right'  style='text-align:center;font-size:40rpx;'>
         <view style='font-size:30rpx;'>{{item.name}}</view>
         <view style='color:red'>￥{{item.price}}</view>
-        <button type='text' bindtap='minus'>-</button>
+        <button type='text' bindtap='minus' disabled='{{disableMinus}}'>-</button>
         <button type='text'>{{item.count.quantity}}</button>
-        <button type='text' bidntap="add">+</button>
+        <button type='text' bindtap="add"   data-add="{{index}}"  disabled='{{disableAdd}}'>+</button>
       </view>
     </view>
   </block>

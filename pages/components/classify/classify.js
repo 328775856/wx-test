@@ -168,7 +168,12 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    wx.showLoading({
+      title: '正在加载...',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
   },
 
   /**

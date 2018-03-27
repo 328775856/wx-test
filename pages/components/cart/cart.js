@@ -80,31 +80,55 @@ Page({
         },
     ],
     cur: 0,
+    num:0,
+    disableAdd:false,
+    disableMinus:false
   },
-  isAllchecked:function(){
+  isAllchecked:function(e){
     if (this.data.carts.length===6){
       console.log(1234)
     }
   },
   add:function(e){
     this.setData({
-      quantity: quantity++
+      cur: e.currentTarget.dataset.add,
     })
-    console.log(this.data.quantity)
+    if (this.data.carts[this.data.cur].count.quantity >= 0 && this.data.carts[this.data.cur].count.quantity < 20) {
+
+      this.data.carts[this.data.cur].count.quantity++
+    } else if (this.data.carts[this.data.cur].count.quantity == 20){
+      this.setData({
+        disableAdd: true
+      })
+    }
+    this.setData({
+      carts: this.data.carts
+    })
+    console.log(this.data.carts[this.data.cur].count.quantity)
     //this.quantity++;
   },
-  minus:function(){
-    this.quantity--;
+  minus:function(e){
+    if (this.data.carts[this.data.cur].count.quantity>0){
+        this.setData({
+          disableMinus:true
+        })
+      this.data.carts[this.data.cur].count.quantity--
+    }
+    this.setData({
+      carts: this.data.carts
+    })
+    console.log(this.data.carts[this.data.cur].count.quantity)
+    //this.quantity++;
   },
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
 
     //模拟加载
-    setTimeout(function () {
-      // complete
-      wx.hideNavigationBarLoading() //完成停止加载
-      wx.stopPullDownRefresh() //停止下拉刷新
-    }, 1500);
+      setTimeout(function () {
+        // complete
+        wx.hideNavigationBarLoading() //完成停止加载
+        wx.stopPullDownRefresh() //停止下拉刷新
+      }, 1500);
   },
   cost:function(){
     
