@@ -1,8 +1,8 @@
 {
   "pages":[
-    "pages/components/cart/cart",
-    "pages/components/classify/classify",
     "pages/components/home/home",
+    "pages/components/classify/classify",
+    "pages/components/cart/cart",
     "pages/components/mine/mine",
     "pages/components/index/index",
     "pages/test/Component/TextInput/TextInput",
@@ -15,7 +15,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"red",
-    "backgroundColor": "#eee",
+    "backgroundColor": "#ccc",
     "enablePullDownRefresh": true
   },
   "tabBar":{

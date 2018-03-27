@@ -15,6 +15,6 @@
   <view class='bottom'>
     <checkbox checked='{{isSelect}}' bindtap='isAllchecked'></checkbox>
     <view>合计：{{total}}</view>
-    <button hover-class="button-hover">去结算</button>
+    <button hover-class="button-hover" bindtap='cost'>去结算</button>
   </view>
 </view>

@@ -106,12 +106,27 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
   },
+  cost:function(){
+    
+    wx.showLoading({
+      title: '加载中',
+    })
+
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
+
+    this.setData({
+      total: 800
+    })
+  },
+  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
