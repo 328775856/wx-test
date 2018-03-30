@@ -1,7 +1,7 @@
 <view class="container">
   <block >
     <view class='col' wx:for="{{carts}}" wx:key="carts"  data-index="{{index}}">
-      <checkbox></checkbox>
+      <checkbox bindtap='total'></checkbox>
       <image src="{{item.pic}}" style='width:200rpx;height:180rpx;'></image>
       <view class='right'  style='text-align:center;font-size:40rpx;'>
         <view style='font-size:30rpx;'>{{item.name}}</view>

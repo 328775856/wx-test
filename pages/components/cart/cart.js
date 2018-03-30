@@ -14,6 +14,7 @@ Page({
           // 数据设定
           count: {
             quantity: 2,
+            cost:100,
             min: 1,
             max: 20
           },
@@ -26,6 +27,7 @@ Page({
           // 数据设定
           count: {
             quantity: 1,
+            cost:340,
             min: 1,
             max: 20
           },
@@ -38,6 +40,7 @@ Page({
           // 数据设定
           count: {
             quantity: 3,
+            cost:130,
             min: 1,
             max: 20
           },
@@ -50,6 +53,7 @@ Page({
           // 数据设定
           count: {
             quantity: 1,
+            cost:490,
             min: 1,
             max: 20
           },
@@ -61,7 +65,8 @@ Page({
           isSelect: false,
           // 数据设定
           count: {
-            quantity: 10,
+            quantity: 1,
+            cost:289,
             min: 1,
             max: 20
           },
@@ -74,11 +79,13 @@ Page({
           // 数据设定
           count: {
             quantity: 1,
+            cost:230,
             min: 1,
             max: 20
           },
         },
     ],
+    total:0,
     cur: 0,
     num:0,
     disableAdd:false,
@@ -95,30 +102,31 @@ Page({
     })
     if (this.data.carts[this.data.cur].count.quantity >= 0 && this.data.carts[this.data.cur].count.quantity < 20) {
 
-      this.data.carts[this.data.cur].count.quantity++
-    } else if (this.data.carts[this.data.cur].count.quantity == 20){
-      this.setData({
-        disableAdd: true
-      })
-    }
+      this.data.carts[this.data.cur].count.quantity++;
+      this.data.carts[this.data.cur].price = this.data.carts[this.data.cur].count.quantity * this.data.carts[this.data.cur].count.cost;
+    } 
     this.setData({
       carts: this.data.carts
     })
-    console.log(this.data.carts[this.data.cur].count.quantity)
-    //this.quantity++;
+    //console.log(this.data.carts[this.data.cur].count.quantity)
   },
   minus:function(e){
     if (this.data.carts[this.data.cur].count.quantity>0){
-        this.setData({
-          disableMinus:true
-        })
-      this.data.carts[this.data.cur].count.quantity--
+      this.data.carts[this.data.cur].count.quantity--;
+      this.data.carts[this.data.cur].price = this.data.carts[this.data.cur].count.quantity * this.data.carts[this.data.cur].count.cost;
     }
     this.setData({
       carts: this.data.carts
     })
-    console.log(this.data.carts[this.data.cur].count.quantity)
-    //this.quantity++;
+    //console.log(this.data.carts[this.data.cur].count.quantity)
+  },
+  total:function(e){
+    this.data.carts[this.data.cur].isSelect=true;
+    this.data.total =this.data.carts[this.data.cur].price;
+    this.data.total+= this.data.total;
+    this.setData({
+      total: this.data.total,
+    })
   },
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
@@ -141,7 +149,7 @@ Page({
     }, 2000)
 
     this.setData({
-      total: 800
+     // total: this.data.carts[this.data.cur].price
     })
   },
   

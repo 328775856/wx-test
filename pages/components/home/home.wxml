@@ -4,7 +4,7 @@
 
 
   <view class='header' style='display:flex'>
-    <text style='flex:0 0 25%;' wx:for="{{nav}}" data-idx="{{index}}" wx:key="unique" bindtap="navtap" class="item {{currentTab==index?'active':''}}">{{item}}</text>
+    <text style='flex:0 0 25%;' wx:for="{{nav}}" wx:key="{{nav}}" data-idx="{{index}}" wx:key="unique" bindtap="navtap" class="item {{currentTab==index?'active':''}}">{{item}}</text>
   </view>
   <swiper style='width:100%;' indicator-dots="{{indicator}}" autoplay='{{autoplay}}' interval='{{interval}}'>
     <block wx:for="{{bannerImgUrl}}" wx:key="list">
@@ -14,7 +14,7 @@
     </block>
   </swiper>
   <view class='wrap bg_white' style='width:100%;margin-bottom:10rpx;'>
-    <view style='flex:1 0 20%;text-align:center' wx:for="{{bannerTitle}}" data-num="{{index}}" bindtap="localTo" class="item wrap {{s==index?'active':''}}">
+    <view style='flex:1 0 20%;text-align:center' wx:for="{{bannerTitle}}" data-num="{{index}}" bindtap="localTo" class="item wrap {{s==index?'active':''}}" wx:key="{{bannerTitle}}">
       <image src='{{item.iconPath}}' class='column' style='width:150rpx;height:150rpx'></image>
       <text>{{item.title}}</text>
     </view>
@@ -23,25 +23,25 @@
   <image src='../../images/qb_banner.jpg' style='width:100%;margin-bottom:20rpx;'></image>
   <view class='content'>
     <view class="{{currentTab==0?'show':'hidden'}} wrap">
-      <view class='flex' wx:for="{{imgUrl.hf}}">
+      <view class='flex' wx:for="{{imgUrl.hf}}" wx:key="{{hf}}">
         <image src='{{item.msg}}'></image>
         <text>{{item.text}}</text>
       </view>
     </view>
     <view class="{{currentTab==1?'show':'hidden'}} wrap">
-      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.cz}}">
+      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.cz}}" wx:key="{{cz}}">
         <image src='{{item.msg}}'></image>
         <text>{{item.text}}</text>
       </view>
     </view>
     <view class="{{currentTab==2?'show':'hidden'}} wrap">
-      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.xs}}">
+      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.xs}}" wx:key="{{xs}}">
         <image src='{{item.msg}}'></image>
         <text>{{item.text}}</text>
       </view>
     </view>
     <view class="{{currentTab==3?'show':'hidden'}} wrap">
-      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.gh}}">
+      <view class='flex' style='flex-flow:row wrap;' wx:for="{{imgUrl.gh}}" wx:key="{{gh}}">
         <image src='{{item.msg}}'></image>
         <text>{{item.text}}</text>
       </view>
